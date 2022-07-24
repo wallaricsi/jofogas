@@ -1,0 +1,35 @@
+
+
+#switch = driver.switch_to.alert.sendKeys("TAB") 
+#driver.switchTo().alert().sendKeys("TAB");
+
+#user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
+#driver = webdriver.Chrome(executable_path='c:\webDriver\chromedriver.exe')
+
+driver.switch_to_alert().accept()
+driver.switch_to_alert().dismiss()
+
+# Felhasználó
+user = driver.find_element_by_id('login-modal-email')
+user.clear()
+user.send_keys('MAIL@gmail.com')
+# user.send_keys(keys, BACK_SPACE) - from selenium.webdriver.common.keys import keys
+
+
+
+https://stackoverflow.com/questions/35385221/send-multiple-tab-key-presses-with-selenium
+https://www.delftstack.com/howto/python/selenium-send-keys-in-python/
+https://selenium-python.readthedocs.io/locating-elements.html
+
+
+https://stackoverflow.com/questions/37400974/unicode-error-unicodeescape-codec-cant-decode-bytes-in-position-2-3-trunca
+https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-cant-decode-bytes-cannot-open-text-file
+
+
+
+https://stackoverflow.com/questions/58734107/typeerror-webelement-object-is-not-subscriptable
+
+
+# HirdetésFeladás
+#driver.find_element(By.XPATH, '/a[text()="Hirdetésfeladás"]').click() - nem működik
+#content = driver.find_element(By.CLASS_NAME, 'link ai-link').click() - nem működik
