@@ -42,7 +42,7 @@ time.sleep(2)
 # Belépés gombra kattint
 driver.find_element(By.XPATH, '//button[text()="Belépés"]').click()
 
-time.sleep(2)
+time.sleep(3)
 
 # e-mail cím input mező
 driver.find_element(By.ID, "login-modal-email").click()
@@ -58,5 +58,20 @@ driver.find_element(By.ID, "login-modal-submit").click()
 time.sleep(5)
 # HirdetésFeladás
 driver.find_element(By.XPATH, '//*[@id="page-content"]/header/div[3]/div/div[3]/a').click()
+
+# Hirdetés neve
+driver.find_element(By.XPATH, '//*[@id="hf_subject"]').click()
+driver.find_element(By.XPATH, '//*[@id="hf_subject"]').send_keys("TesztHirdetés")
+
+# Képfeltöltés
+path = "D:\\talca.png"
+#driver.find_element(By.XPATH, '//*[@id="step1-photo"]/div[3]/div/div[3]/div[2]/label').click() 
+#driver.find_element(By.XPATH, '//*[@id="image-uploader-wrapper"]/label').send_keys("D:\\talca.png")
+driver.find_element_by_xpath('//*[@id="upload-image"]').send_keys(path)
+
+time.sleep(10)
+
+# Tovább
+driver.find_element(By.XPATH, '//*[@id="hirdetesfeladas"]/div/div/button').click()
 
 time.sleep(55)
